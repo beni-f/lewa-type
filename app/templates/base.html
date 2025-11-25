@@ -70,7 +70,7 @@
         <!-- RIGHT: empty for now, can add icons/buttons later -->
          <div class="d-flex align-items-center gap-2">
             <div>
-                    {% if is_authenticated or session.get('user_id') %}
+                    {% if is_authenticated %}
                     <form method="post" action="{{ url_for('routes.logout') }}" class="m-0 d-inline">
                         <input type="hidden" name="csrf_token" value="{{ csrf_token or session.get('csrf_token') }}" />
                         <button class="btn btn-sm btn-outline-danger ms-2" type="submit">Logout</button>
